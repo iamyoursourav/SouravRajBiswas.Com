@@ -1483,7 +1483,7 @@ amp-lightbox {
 .ampbell {
     overflow: hidden;
     position: fixed;
-    bottom: 70px;
+    bottom: 25px;
     right: 15px;
     float: right;
 }
