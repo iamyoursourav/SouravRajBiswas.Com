@@ -1,0 +1,102 @@
+.status-msg-wrap {
+    font-size: 90%!important;
+}
+.status-msg-wrap a {
+    padding-left: 1%!important;
+    text-decoration: none!important;
+}
+.srbnavmenu1 {
+    height: 70px!important;
+    min-width: 100%!important;
+    position: fixed!important;
+    overflow: hidden!important;
+    top: 0!important;
+    z-index: 99!important;
+}
+.srbnavmenu2 {
+    height: auto!important;
+}
+.ads7281 {
+    margin-top: 75px!important;
+}
+.archivedate {
+    margin-top: 1em!important;
+    font-size: inherit!important;
+    margin-right: -5px!important;
+}
+.status-msg-wrap {
+    font-size: 90%!important;
+}
+.status-msg-wrap a {
+    padding-left: 1%!important;
+    text-decoration: none!important;
+}
+ .status-msg-body {
+    position: relative!important;
+}
+.comments .avatar-image-container {
+    width: 35px!important;
+    height: 35px;
+    max-height: 60px!important;
+    padding: 0;
+    border-radius: 60px;
+    box-shadow: 0 0 0 5px #eee;
+}
+.comments .avatar-image-container img {
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    max-width: 60px!important;
+    border: 0!important;
+    border-radius: 60px;
+}
+.comments .comment-thread.inline-thread {
+    background: 0 0;
+}
+.comments .continue {
+    border-top: 0 solid transparent;
+}
+.comments .comments-content .datetime {
+    float: right;
+    font-size: 11px;
+}
+.comments .comments-content .user a {
+    font-size: 15px;
+    color: #000;
+    pointer-events: none;
+    cursor: default;
+}
+.comments .comments-content .datetime a {
+    pointer-events: none;
+    cursor: default;
+    color: #000;
+    text-decoration: none;
+}
+.comments .comments-content .comment:first-child {
+    padding-top: 0!important;
+}
+.comments .comments-content .comment {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.comments .continue a {
+    padding: 0;
+}
+.comments .comments-content .icon.blog-author {
+    background-image: none;
+}
+.comments .comments-content .comment-thread ol {
+    padding-left: 35px!important;
+}
+.comments .comment-block {
+    background: #f9f9f9;
+    color: #555;
+    box-shadow: 0 4px 10px #eee;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 60px;
+    padding: 10px;
+    border: 4px solid #eee!important;
+    border-radius: 10px;
+    font: 1.19em/1.2 Cambria, Georgia, sans-serif;
+}
