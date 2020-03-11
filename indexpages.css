@@ -135,8 +135,8 @@
     color: #764ba2;
 }
 .srbmenuli0::before {
-    content: &#39;
-    &#39;
+    content: '
+    '
     ;
     width: 0%;
     height: 100%;
@@ -157,8 +157,8 @@
     box-shadow: 2px 0 14px rgba(0, 0, 0, .6);
 }
 .srbmenuli0::after {
-    content: &#39;
-    &#39;
+    content: '
+    '
     ;
     width: 0%;
     height: 100%;
@@ -191,10 +191,10 @@
     margin-top: 8px;
     display: inline;
     position: relative;
-    font: bold 15px/40px &quot;
-    lucida sans&quot;
-    , &quot;
-    trebuchet MS&quot;
+    font: bold 15px/40px "
+    lucida sans"
+    , "
+    trebuchet MS"
     , Tahoma;
     text-transform: uppercase;
     margin-left: 5px;
@@ -321,8 +321,8 @@ amp-social-share.rounded {
     font-family: FontAwesome;
 }
 .Label li a:before {
-    content: &quot;
-    \f07b &quot;
+    content: "
+    \f07b "
 }
 .scrollToTop {
     cursor: pointer;
@@ -393,8 +393,8 @@ amp-social-share.rounded {
     color: #764ba2;
 }
 .btn10::before {
-    content: &#39;
-    &#39;
+    content: '
+    '
     ;
     width: 0%;
     height: 100%;
@@ -415,8 +415,8 @@ amp-social-share.rounded {
     box-shadow: 2px 0 14px rgba(0, 0, 0, .6);
 }
 .btn10::after {
-    content: &#39;
-    &#39;
+    content: '
+    '
     ;
     width: 0%;
     height: 100%;
@@ -480,82 +480,82 @@ body::-webkit-scrollbar-track {
     border: 0;
 }
 @font-face {
-    font-family: &#39;
-    Open Sans&#39;
+    font-family: '
+    Open Sans'
     ;
     font-style: normal;
     font-weight: 400;
-    src: local(&#39;
-    Open Sans Regular&#39;
-    ), local(&#39;
-    OpenSans-Regular&#39;
-    ), url(https: //fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format(&#39;
-    woff2&#39;
+    src: local('
+    Open Sans Regular'
+    ), local('
+    OpenSans-Regular'
+    ), url(https: //fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('
+    woff2'
     );
 }
 @font-face {
-    font-family: &#39;
-    Open Sans&#39;
+    font-family: '
+    Open Sans'
     ;
     font-style: normal;
     font-weight: 600;
-    src: local(&#39;
-    Open Sans SemiBold&#39;
-    ), local(&#39;
-    OpenSans-SemiBold&#39;
-    ), url(https: //fonts.gstatic.com/s/opensans/v14/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format(&#39;
-    woff2&#39;
+    src: local('
+    Open Sans SemiBold'
+    ), local('
+    OpenSans-SemiBold'
+    ), url(https: //fonts.gstatic.com/s/opensans/v14/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format('
+    woff2'
     );
 }
 @font-face {
-    font-family: &#39;
-    Open Sans&#39;
+    font-family: '
+    Open Sans'
     ;
     font-style: normal;
     font-weight: 700;
-    src: local(&#39;
-    Open Sans Bold&#39;
-    ), local(&#39;
-    OpenSans-Bold&#39;
-    ), url(https: //fonts.gstatic.com/s/opensans/v14/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format(&#39;
-    woff2&#39;
+    src: local('
+    Open Sans Bold'
+    ), local('
+    OpenSans-Bold'
+    ), url(https: //fonts.gstatic.com/s/opensans/v14/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('
+    woff2'
     );
 }
 @font-face {
-    font-family: &#39;
-    Open Sans&#39;
+    font-family: '
+    Open Sans'
     ;
     font-style: normal;
     font-weight: 800;
-    src: local(&#39;
-    Open Sans ExtraBold&#39;
-    ), local(&#39;
-    OpenSans-ExtraBold&#39;
-    ), url(https: //fonts.gstatic.com/s/opensans/v14/EInbV5DfGHOiMmvb1Xr-hugdm0LZdjqr5-oayXSOefg.woff2) format(&#39;
-    woff2&#39;
+    src: local('
+    Open Sans ExtraBold'
+    ), local('
+    OpenSans-ExtraBold'
+    ), url(https: //fonts.gstatic.com/s/opensans/v14/EInbV5DfGHOiMmvb1Xr-hugdm0LZdjqr5-oayXSOefg.woff2) format('
+    woff2'
     );
 }
 @font-face {
-    font-family: &#39;
-    Material Icons&#39;
+    font-family: '
+    Material Icons'
     ;
     font-style: normal;
     font-weight: 400;
-    src: local(&#39;
-    Material Icons&#39;
-    ), local(&#39;
-    MaterialIcons-Regular&#39;
-    ), url(https: //fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ewrjPiaoEww8AihgqWRJAo.woff) format(&#39;
-    woff&#39;
-    ), url(https: //fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format(&#39;
-    woff2&#39;
-    ), url(https: //fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5bbKic1PW3nceB3q24YFOMg.ttf) format(&#39;
-    truetype&#39;
+    src: local('
+    Material Icons'
+    ), local('
+    MaterialIcons-Regular'
+    ), url(https: //fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ewrjPiaoEww8AihgqWRJAo.woff) format('
+    woff'
+    ), url(https: //fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('
+    woff2'
+    ), url(https: //fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5bbKic1PW3nceB3q24YFOMg.ttf) format('
+    truetype'
     );
 }
 .material-icons {
-    font-family: &#39;
-    Material Icons&#39;
+    font-family: '
+    Material Icons'
     ;
     font-weight: 400;
     font-style: normal;
@@ -571,23 +571,23 @@ body::-webkit-scrollbar-track {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: &#39;
-    liga&#39;
+    font-feature-settings: '
+    liga'
 }
 @font-face {
     font-family: FontAwesome;
     src: url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0);
     src: url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefixamp;
-    v=4.7.0) format(&#39;
-    embedded-opentype&#39;
-    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format(&#39;
-    woff2&#39;
-    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0) format(&#39;
-    woff&#39;
-    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0) format(&#39;
-    truetype&#39;
-    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format(&#39;
-    svg&#39;
+    v=4.7.0) format('
+    embedded-opentype'
+    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format('
+    woff2'
+    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0) format('
+    woff'
+    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0) format('
+    truetype'
+    ), url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('
+    svg'
     );
     font-weight: 400;
     font-style: normal;
@@ -604,8 +604,8 @@ body::-webkit-scrollbar-track {
     display: none;
 }
 body {
-    font-family: &#39;
-    Open Sans&#39;
+    font-family: '
+    Open Sans'
     , sans-serif;
     font-size: 13.6px;
     font-weight: 400;
@@ -1345,8 +1345,8 @@ h2 {
     text-transform: uppercase;
 }
 .sidebar h2:before {
-    content: &quot;
-    \f1b2&quot;
+    content: "
+    \f1b2"
     ;
     width: 15px;
     height: 15px;
@@ -1427,10 +1427,10 @@ h2 {
 #hbz-input {
     width: 59.2%;
     padding: 10.5px 4%;
-    font: bold 15px &quot;
-    lucida sans&quot;
-    , &quot;
-    trebuchet MS&quot;
+    font: bold 15px "
+    lucida sans"
+    , "
+    trebuchet MS"
     , Tahoma;
     border: none;
 }
@@ -1447,10 +1447,10 @@ h2 {
     cursor: pointer;
     height: 40px;
     width: 32.8%;
-    font: bold 15px/40px &quot;
-    lucida sans&quot;
-    , &quot;
-    trebuchet MS&quot;
+    font: bold 15px/40px "
+    lucida sans"
+    , "
+    trebuchet MS"
     , Tahoma;
     color: #fff;
     text-transform: uppercase;
@@ -1706,8 +1706,8 @@ h2 {
     transition: ease .25s;
 }
 .footer-distributed .footer-links a:before {
-    content: &#39;
-    \2022&#39;
+    content: '
+    \2022'
     ;
     font-size: 20px;
     left: 0;
@@ -1785,16 +1785,16 @@ h2 {
     width: 15px;
 }
 }.onesignal-customlink-subscribe.button.medium:before {
-    content: &quot;
-    \f0f3&quot;
+    content: "
+    \f0f3"
     ;
     font-family: FontAwesome;
     font-size: medium;
     padding-right: 5px;
 }
 .onesignal-customlink-subscribe.button.medium:after {
-    content: &quot;
-    \f0f3&quot;
+    content: "
+    \f0f3"
     ;
     font-family: FontAwesome;
     font-size: medium;
