@@ -560,3 +560,15 @@ $(document).ready(function() {
         }
     });
 });
+
+$(window).on("load", function(e) {
+    localStorage.loaded = "yes";
+    if ($('#preloader').length > 0) {
+        $('#preloader').fadeOut('slow', function() { $(this).remove(); });
+    }
+});
+
+if (localStorage.loaded == "yes") {
+    $('#preloader').remove();
+    //or any other method of not showing the spinner
+}
