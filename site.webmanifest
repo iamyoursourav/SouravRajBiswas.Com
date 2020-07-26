@@ -9,6 +9,12 @@
   "display": "standalone",
   "theme_color": "#202442",
   "background_color": "#f7f9f8",
+  "serviceworker": {
+      "src": "https://cdn.souravrajbiswas.com/sw.js",
+      "scope": "https://www.souravrajbiswas.com/",
+      "type": "",
+      "update_via_cache": "none"
+}
   "icons": [
     {
       "src": "https://cdn.souravrajbiswas.com/icon-72x72.png",
