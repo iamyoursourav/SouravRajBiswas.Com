@@ -2,6 +2,7 @@
   "name": "Sourav Raj Biswas",
   "short_name": "Sourav Raj Biswas",
   "description": "www.souravrajbiswas.com",
+  "dir": "ltr",
   "lang": "en",
   "start_url": "https://www.souravrajbiswas.com/",
   "scope": "https://www.souravrajbiswas.com/",
