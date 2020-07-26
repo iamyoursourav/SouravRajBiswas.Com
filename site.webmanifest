@@ -1,34 +1,52 @@
-{"name":"SouravRajBiswas.Com",
-
-"short_name":"Sourav Raj Biswas",
-
-"description": "",
-
-"icons":[
 {
-
-"src":"https://1.bp.blogspot.com/-Pi6DG1N2ws8/Xlz82R_qSJI/AAAAAAAADIU/olSiI-_ZSvgjRqscxQA3AcUduuLZ2_YJgCLcBGAsYHQ/s1600/android-chrome-192x192.png",
-"sizes":"192x192",
-"type":"image/png"
-
-},
-
-{
-
-"src":"https://1.bp.blogspot.com/-_ub9KvK29Ec/Xlz82cM4uyI/AAAAAAAADIQ/Da2l1y7ulHYR5VP85vDPcZiWuPIbO2uYwCLcBGAsYHQ/s320/android-chrome-512x512.png",
-
-"sizes":"512x512",
-
-"type":"image/png"
-
-}
-
-],
-
-"theme_color":"#FC4A1A",
-
-"background_color":"#FC4A1A",
-
-"display":"standalone"
-
+  "name": "Sourav Raj Biswas",
+  "short_name": "Sourav Raj Biswas",
+  "description": "www.souravrajbiswas.com",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#202442",
+  "icons": [
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.souravrajbiswas.com/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
