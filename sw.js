@@ -15,10 +15,7 @@ var urlsToCache = [
   'https://www.souravrajbiswas.com/p/sitemap.html',
   'https://www.souravrajbiswas.com/p/disclaimer.html',
   'https://www.souravrajbiswas.com/p/website-privacy-policy.html',
-  'https://www.blogger.com/static/v1/widgets/2271878333-widgets.js',
   'https://checkout.razorpay.com/v1/checkout.js',
-  'https://www.google-analytics.com/analytics.js',
-  'https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js',
 ];
 
 self.addEventListener('install', function(event) {
