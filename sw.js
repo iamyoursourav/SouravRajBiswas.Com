@@ -1,4 +1,4 @@
-var appVersion = 'v1.00';
+var appVersion = 'v2.00';
 var urlsToCache = [
     'https://1.bp.blogspot.com/-PyzQRd1mKC4/XwTLEivYvFI/AAAAAAAADgk/JUmGVGZV3igFHkC20o5aLR9fYocepBCngCK4BGAYYCw/w300/Sourav-Raj-Biswas-Logo.png',
     'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cfe5.woff',
@@ -11,6 +11,7 @@ var urlsToCache = [
     'https://checkout.razorpay.com/v1/checkout.js',
 ];
 
+var worker = worker;
 var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
 
 self.addEventListener('install', function(event) {
@@ -23,12 +24,28 @@ self.addEventListener('install', function(event) {
 });
 
 
+
 self.addEventListener('activate', function(event) {
+    var cachesToKeep = [appVersion, worker];
     event.waitUntil(
-        caches.open('worker')
+        caches.keys().then(function(keyList) {
+            return Promise.all(keyList.map(function(key) {
+                if (cachesToKeep.indexOf(key) === -1) {
+                    return caches.delete(key);
+                }
+            }));
+        })
+    );
+});
+
+
+self.addEventListener('activate', function(event) {
+    var cachesToKeep = [appVersion, worker];
+    event.waitUntil(
+        caches.open(worker)
         .then(function(cache) {
             cache.delete(workerUrl).then(function(response) {
-                caches.open('worker').then(function(cache) {
+                caches.open(worker).then(function(cache) {
                     return cache.add(workerUrl);
                 })
             })
