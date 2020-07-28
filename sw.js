@@ -1,66 +1,60 @@
 var appVersion = 'v1.00';
 var urlsToCache = [
-  'https://1.bp.blogspot.com/-PyzQRd1mKC4/XwTLEivYvFI/AAAAAAAADgk/JUmGVGZV3igFHkC20o5aLR9fYocepBCngCK4BGAYYCw/w300/Sourav-Raj-Biswas-Logo.png',
-  'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cfe5.woff',
-  'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I9s.woff2',
-  'https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8GBv5p.woff',
-  'https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8GBs5tU1E.woff2',
-  'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CNodeList.prototype.forEach%2CPromise%2CArray.from%2CSet%2CArray.isArray%2CURL%2CURLSearchParams%2CXMLHttpRequest%2Cfetch%2ClocalStorage',
-  'https://cdn.souravrajbiswas.com/style.css',
-  '//2.bp.blogspot.com/-OMDtRcenaJc/XwKjAX_kt8I/AAAAAAAADeQ/LsY920mLp6sgk63PeJGT-4wYqE0g5umUQCK4BGAYYCw/w100-h100-p-k-no-nu/70514788_2662143583804258_2908732881427759104_o.jpg',
-  'https://www.souravrajbiswas.com/p/store.html',
-  'https://www.souravrajbiswas.com/p/about.html',
-  'https://www.souravrajbiswas.com/p/contact.html',
-  'https://www.souravrajbiswas.com/p/sitemap.html',
-  'https://www.souravrajbiswas.com/p/disclaimer.html',
-  'https://www.souravrajbiswas.com/p/website-privacy-policy.html',
-  'https://checkout.razorpay.com/v1/checkout.js',
+	'https://1.bp.blogspot.com/-PyzQRd1mKC4/XwTLEivYvFI/AAAAAAAADgk/JUmGVGZV3igFHkC20o5aLR9fYocepBCngCK4BGAYYCw/w300/Sourav-Raj-Biswas-Logo.png',
+	'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cfe5.woff',
+	'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I9s.woff2',
+	'https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8GBv5p.woff',
+	'https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8GBs5tU1E.woff2',
+	'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CNodeList.prototype.forEach%2CPromise%2CArray.from%2CSet%2CArray.isArray%2CURL%2CURLSearchParams%2CXMLHttpRequest%2Cfetch%2ClocalStorage',
+	'https://cdn.souravrajbiswas.com/style.css',
+	'//2.bp.blogspot.com/-OMDtRcenaJc/XwKjAX_kt8I/AAAAAAAADeQ/LsY920mLp6sgk63PeJGT-4wYqE0g5umUQCK4BGAYYCw/w100-h100-p-k-no-nu/70514788_2662143583804258_2908732881427759104_o.jpg',
+	'https://www.souravrajbiswas.com/p/store.html',
+	'https://www.souravrajbiswas.com/p/about.html',
+	'https://www.souravrajbiswas.com/p/contact.html',
+	'https://www.souravrajbiswas.com/p/sitemap.html',
+	'https://www.souravrajbiswas.com/p/disclaimer.html',
+	'https://www.souravrajbiswas.com/p/website-privacy-policy.html',
+	'https://checkout.razorpay.com/v1/checkout.js',
 ];
 
 self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(appVersion)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+	event.waitUntil(
+		caches.open(appVersion)
+		.then(function(cache) {
+			console.log('Opened cache');
+			return cache.addAll(urlsToCache);
+		})
+	);
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
+	event.respondWith(
+		caches.match(event.request)
+		.then(function(response) {
+			if (response) {
+				return response;
+			}
+			return fetch(event.request);
+		})
+	);
 });
 
 async function handleRequest(request) {
-  let url = new URL(request.url);
-  let target = ORIGINS[url.hostname];
-  if (target) {
-    url.hostname = target;
-    return fetch(url, request)
-  };
-  return fetch(request)
-};
-
-self.addEventListener("fetch", function(event) {
-  if (event.request.url.includes("sw.js")) {
-    event.respondWith(handleRequest(event.request))
-  }
-});
-
-const ORIGINS = {
-  'www.souravrajbiswas.com': 'cdn.souravrajbiswas.com'
+	var url = new URL(request.url);
+	var target = ORIGINS[url.hostname];
+	if (target) {
+		url.hostname = target;
+		return fetch(url, request);
+	}
+	return fetch(request);
 }
 
+self.addEventListener("fetch", function(event) {
+	if (event.request.url.includes("sw.js")) {
+		event.respondWith(handleRequest(event.request));
+	}
+});
 
-
-
-
+var ORIGINS = {
+	'www.souravrajbiswas.com': 'cdn.souravrajbiswas.com'
+};
