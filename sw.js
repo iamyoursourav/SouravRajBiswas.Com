@@ -58,7 +58,6 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
     var url = new URL(event.request.url);
     if (url.origin == location.origin && url.pathname == '/sw.js') {
-        var url = new URL(event.request.url);
         event.respondWith(caches.match('/sw.js'));
     } else {
         event.respondWith(
