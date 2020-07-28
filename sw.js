@@ -1,4 +1,4 @@
-var appVersion = 'v2.00';
+var appVersion = 'v1.00';
 var urlsToCache = [
     'https://1.bp.blogspot.com/-PyzQRd1mKC4/XwTLEivYvFI/AAAAAAAADgk/JUmGVGZV3igFHkC20o5aLR9fYocepBCngCK4BGAYYCw/w300/Sourav-Raj-Biswas-Logo.png',
     'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cfe5.woff',
@@ -11,7 +11,7 @@ var urlsToCache = [
     'https://checkout.razorpay.com/v1/checkout.js',
 ];
 
-var worker = worker;
+var worker = 'worker';
 var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
 
 self.addEventListener('install', function(event) {
