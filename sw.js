@@ -23,22 +23,9 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
     if (event.request.url.includes("sw.js")) {
-
-        var ORIGINS = {
-            'www.souravrajbiswas.com': 'cdn.souravrajbiswas.com'
-        };
-
-        async function handleRequest(request) {
-            var url = new URL(event.request.url);
-            var target = ORIGINS[url.hostname];
-            if (target) {
-                url.hostname = target;
-                return fetch(url, event.request);
-            }
-            return fetch(event.request);
-        }
-
-        event.respondWith(handleRequest(event.request));
+        event.respondWith(
+            xxxxxxxxxx
+        );
 
     } else {
         event.respondWith(
