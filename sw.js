@@ -62,6 +62,7 @@ self.addEventListener('fetch', function(event) {
             );
         }
     } else {
+        console.log('not passToCdn');
         event.respondWith(
             caches.match(event.request)
             .then(function(response) {
