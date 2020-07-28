@@ -10,67 +10,46 @@ var urlsToCache = [
     '//2.bp.blogspot.com/-OMDtRcenaJc/XwKjAX_kt8I/AAAAAAAADeQ/LsY920mLp6sgk63PeJGT-4wYqE0g5umUQCK4BGAYYCw/w100-h100-p-k-no-nu/70514788_2662143583804258_2908732881427759104_o.jpg',
     'https://checkout.razorpay.com/v1/checkout.js',
 ];
-var cdn = 'cdn.souravrajbiswas.com';
-var passToCdn = [
-    'sw.js',
-];
+
+var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(appVersion)
         .then(function(cache) {
-            console.log('Opened cache');
             return cache.addAll(urlsToCache);
         })
     );
 });
 
-self.addEventListener('fetch', function(event) {
-    if (event.request.url.includes(passToCdn)) {
-        console.log('includes passToCdn');
-        var requestUrl = event.request.url;
-        var domain = requestUrl.hostname;
-        if (domain != cdn) {
-            console.log('domain != cdn');
-            var url = requestUrl.toString();
-            console.log(url);
-            var target = url.replace(domain, cdn);
-            console.log(target);
-            var newRequest = new Request(target);
-            console.log(newRequest);
-            event.respondWith(
-                fetch(newRequest)
-                .then(function(response) {
-                    if (response) {
-                        return response;
-                        console.log('newRequest Ok');
-                    }
-                    return fetch(event.request);
-                    console.log('newRequest Faild');
-                }));
 
-        } else {
-            console.log('domain == cdn');
-            event.respondWith(
-                caches.match(event.request)
-                .then(function(response) {
-                    if (response) {
-                        return response;
+self.addEventListener('activate', function(event) {
+    var cachesToKeep = [appVersion];
+    event.waitUntil(
+        caches.keys().then(function(keyList) {
+            return Promise.all(keyList.map(function(key) {
+                if (cachesToKeep.indexOf(key) === -1) {
+                    return function() {
+                        caches.delete(key);
+                        caches.open('worker').then(function(cache) {
+                            return cache.add(workerUrl);
+                        });
                     }
-                    return fetch(event.request);
-                })
-            );
-        }
-    } else {
-        console.log('not passToCdn');
-        event.respondWith(
-            caches.match(event.request)
-            .then(function(response) {
-                if (response) {
-                    return response;
                 }
-                return fetch(event.request);
-            })
-        );
-    }
+            }));
+        })
+    );
+});
+
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request)
+        .then(function(response) {
+            if (response) {
+                return response;
+            }
+            return fetch(event.request);
+        })
+    );
 });
