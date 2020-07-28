@@ -54,8 +54,8 @@ self.addEventListener("fetch", function(event) {
   if (event.request.url.includes("sw.js")) {
     event.respondWith(handleRequest(event.request))
   }
-})
-;
+});
+
 const ORIGINS = {
   'www.souravrajbiswas.com': 'cdn.souravrajbiswas.com'
 }
