@@ -39,3 +39,28 @@ self.addEventListener('fetch', function(event) {
     )
   );
 });
+
+async function handleRequest(request) {
+  let url = new URL(request.url);
+  let target = ORIGINS[url.hostname];
+  if (target) {
+    url.hostname = target;
+    return fetch(url, request)
+  };
+  return fetch(request)
+};
+
+self.addEventListener("fetch", function(event) {
+  if (event.request.url.includes("sw.js")) {
+    event.respondWith(handleRequest(event.request))
+  }
+})
+;
+const ORIGINS = {
+  'www.souravrajbiswas.com': 'cdn.souravrajbiswas.com'
+}
+
+
+
+
+
