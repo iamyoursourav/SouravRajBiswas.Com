@@ -27,22 +27,30 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
     if (event.request.url.includes(passToCdn)) {
+        console.log('includes passToCdn');
         var requestUrl = event.request.url;
         var domain = requestUrl.hostname;
         if (domain != cdn) {
+            console.log('domain != cdn');
             var url = requestUrl.toString();
+            console.log(url);
             var target = url.replace(domain, cdn);
+            console.log(target);
             var newRequest = new Request(target);
+            console.log(newRequest);
             event.respondWith(
                 fetch(newRequest)
                 .then(function(response) {
                     if (response) {
                         return response;
+                        console.log('newRequest Ok');
                     }
                     return fetch(event.request);
+                    console.log('newRequest Faild');
                 }));
 
         } else {
+            console.log('domain == cdn');
             event.respondWith(
                 caches.match(event.request)
                 .then(function(response) {
