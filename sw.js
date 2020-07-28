@@ -33,12 +33,13 @@ self.addEventListener('fetch', function(event) {
             var target = ORIGINS[url.hostname];
             if (target) {
                 url.hostname = target;
-                return fetch(url, request);
+                return fetch(url, event.request);
             }
-            return fetch(request);
+            return fetch(event.request);
         }
 
         event.respondWith(handleRequest(event.request));
+
     } else {
         event.respondWith(
             caches.match(event.request)
