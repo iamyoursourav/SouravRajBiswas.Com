@@ -1,4 +1,8 @@
-var appVersion = 'v1.00';
+var appVersion = 'v5.00';
+
+var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
+var mainUrl = 'https://www.souravrajbiswas.com/sw.js';
+
 var urlsToCache = [
     'https://1.bp.blogspot.com/-PyzQRd1mKC4/XwTLEivYvFI/AAAAAAAADgk/JUmGVGZV3igFHkC20o5aLR9fYocepBCngCK4BGAYYCw/w300/Sourav-Raj-Biswas-Logo.png',
     'https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cfe5.woff',
@@ -12,7 +16,8 @@ var urlsToCache = [
 ];
 
 var worker = 'worker';
-var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
+var workerRequest = new Request(workerUrl);
+var workerMain = new Request(mainUrl);
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
@@ -54,13 +59,26 @@ self.addEventListener('activate', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
-            if (response) {
-                return response;
-            }
-            return fetch(event.request);
-        })
-    );
+    if (event.request.url == workerMain.url) {
+        event.respondWith(
+            caches.match(workerRequest)
+            .then(function(response) {
+                if (response) {
+                    return response;
+                }
+                return fetch(event.request);
+            })
+        );
+    } else {
+        event.respondWith(
+            caches.match(event.request)
+            .then(function(response) {
+                if (response) {
+                    return response;
+                }
+                return fetch(event.request);
+            })
+        );
+    }
+
 });
