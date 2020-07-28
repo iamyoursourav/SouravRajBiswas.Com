@@ -10,6 +10,10 @@ var urlsToCache = [
     '//2.bp.blogspot.com/-OMDtRcenaJc/XwKjAX_kt8I/AAAAAAAADeQ/LsY920mLp6sgk63PeJGT-4wYqE0g5umUQCK4BGAYYCw/w100-h100-p-k-no-nu/70514788_2662143583804258_2908732881427759104_o.jpg',
     'https://checkout.razorpay.com/v1/checkout.js',
 ];
+var cdn = 'cdn.souravrajbiswas.com';
+var passToCdn = [
+    'sw.js',
+];
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
@@ -22,11 +26,33 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    if (event.request.url.includes("sw.js")) {
-        event.respondWith(
-            xxxxxxxxxx
-        );
+    if (event.request.url.includes(passToCdn)) {
+        var requestUrl = event.request.url;
+        var domain = requestUrl.hostname;
+        if (domain != cdn) {
+            var url = requestUrl.toString();
+            var target = url.replace(domain, cdn);
+            var newRequest = new Request(target);
+            event.respondWith(
+                fetch(newRequest)
+                .then(function(response) {
+                    if (response) {
+                        return response;
+                    }
+                    return fetch(event.request);
+                }));
 
+        } else {
+            event.respondWith(
+                caches.match(event.request)
+                .then(function(response) {
+                    if (response) {
+                        return response;
+                    }
+                    return fetch(event.request);
+                })
+            );
+        }
     } else {
         event.respondWith(
             caches.match(event.request)
@@ -38,5 +64,4 @@ self.addEventListener('fetch', function(event) {
             })
         );
     }
-
 });
