@@ -1,0 +1,2 @@
+RewriteEngine ON
+RewriteCond %{REQUEST_URI} ^/web RewriteRule ^(.*)$ http:// www. souravrajbiswas. com/$1 [R=301,L,P
