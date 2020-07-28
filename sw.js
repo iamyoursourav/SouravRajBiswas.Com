@@ -1,4 +1,4 @@
-var appVersion = 'v3.00';
+var appVersion = 'v6.00';
 
 var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
 
@@ -56,19 +56,13 @@ self.addEventListener('activate', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
-    var url = new URL(event.request.url);
-    if (url.origin == location.origin && url.pathname == '/sw.js') {
-        event.respondWith(caches.match('/sw.js'));
-    } else {
-        event.respondWith(
-            caches.match(event.request)
-            .then(function(response) {
-                if (response) {
-                    return response;
-                }
-                return fetch(event.request);
-            })
-        );
-    }
-
+    event.respondWith(
+        caches.match(event.request)
+        .then(function(response) {
+            if (response) {
+                return response;
+            }
+            return fetch(event.request);
+        })
+    );
 });
