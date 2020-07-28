@@ -1,4 +1,4 @@
-var appVersion = 'v4.00';
+var appVersion = 'v3.00';
 
 var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
 
@@ -56,6 +56,7 @@ self.addEventListener('activate', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
+    var url = new URL(event.request.url);
     if (url.origin == location.origin && url.pathname == '/sw.js') {
         var url = new URL(event.request.url);
         event.respondWith(caches.match('/sw.js'));
