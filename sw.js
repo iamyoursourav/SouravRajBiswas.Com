@@ -1,7 +1,6 @@
-var appVersion = 'v5.00';
+var appVersion = 'v4.00';
 
 var workerUrl = 'https://cdn.souravrajbiswas.com/sw.js';
-var mainUrl = 'https://www.souravrajbiswas.com/sw.js';
 
 var urlsToCache = [
     'https://1.bp.blogspot.com/-PyzQRd1mKC4/XwTLEivYvFI/AAAAAAAADgk/JUmGVGZV3igFHkC20o5aLR9fYocepBCngCK4BGAYYCw/w300/Sourav-Raj-Biswas-Logo.png',
@@ -16,8 +15,6 @@ var urlsToCache = [
 ];
 
 var worker = 'worker';
-var workerRequest = new Request(workerUrl);
-var workerMain = new Request(mainUrl);
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
@@ -59,16 +56,9 @@ self.addEventListener('activate', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
-    if (event.request.url == workerMain.url) {
-        event.respondWith(
-            caches.match(workerRequest)
-            .then(function(response) {
-                if (response) {
-                    return response;
-                }
-                return fetch(event.request);
-            })
-        );
+    if (url.origin == location.origin && url.pathname == '/sw.js') {
+        var url = new URL(event.request.url);
+        event.respondWith(caches.match('/sw.js'));
     } else {
         event.respondWith(
             caches.match(event.request)
