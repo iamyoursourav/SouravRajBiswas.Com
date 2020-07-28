@@ -50,7 +50,7 @@ async function handleRequest(request) {
   return fetch(request)
 };
 
-addEventListener("fetch", function(event) {
+self.addEventListener("fetch", function(event) {
   if (event.request.url.includes("sw.js")) {
     event.respondWith(handleRequest(event.request))
   }
