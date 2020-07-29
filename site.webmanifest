@@ -1,10 +1,11 @@
 {
   "name": "Sourav Raj Biswas",
   "short_name": "Sourav Raj Biswas",
-  "description": "www.souravrajbiswas.com",
+  "description": "Technical Knowledges",
   "dir": "ltr",
   "lang": "en",
-  "start_url": "https://www.souravrajbiswas.com/",
+  "orientation": "portrait-primary",
+  "start_url": "https://www.souravrajbiswas.com",
   "scope": "https://www.souravrajbiswas.com/",
   "display": "standalone",
   "theme_color": "#202442",
