@@ -10,51 +10,59 @@
   "theme_color": "#202442",
   "background_color": "#f7f9f8",
   "serviceworker": {
-      "src": "https://cdn.souravrajbiswas.com/sw.js",
+      "src": "https://www.souravrajbiswas.com/sw.js",
       "scope": "https://www.souravrajbiswas.com/",
       "type": "",
       "update_via_cache": "none"
   },
   "icons": [
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-72x72.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "72x72",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-96x96.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "96x96",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-128x128.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "128x128",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-144x144.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "144x144",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-152x152.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "152x152",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-192x192.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-384x384.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "384x384",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://cdn.souravrajbiswas.com/icon-512x512.png",
+      "src": "https://cdn.souravrajbiswas.com/app-icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
