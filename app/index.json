@@ -6,5 +6,9 @@
             "3": "&#xf0f3;",
             "4": "&#xf2bd;"
         }
+    },
+    "topBar": {
+        "text": "Login",
+        "imageText": "&#xf2bd;"
     }
 }
